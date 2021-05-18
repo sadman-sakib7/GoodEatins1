@@ -43,7 +43,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let recipesVC = segue.destination as? RecipesSelectionVC {
-            //recipesVC.selectedCategory = categoryToPass
+            recipesVC.selectedCategory = categoryToPass
         }
     }
     

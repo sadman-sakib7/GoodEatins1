@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,14 +81,60 @@
                     <view key="view" contentMode="scaleToFill" id="5Hm-8H-dPb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i0U-hc-e2o">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="idl-7E-Its">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeCell" id="Wwe-eC-7Rc" customClass="RecipeCell" customModule="GoodEatins" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0vW-nJ-9wK">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad6" translatesAutoresizingMaskIntoConstraints="NO" id="GeY-yl-M61">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="GeY-yl-M61" secondAttribute="trailing" id="HBx-8W-ofr"/>
+                                                <constraint firstItem="GeY-yl-M61" firstAttribute="top" secondItem="0vW-nJ-9wK" secondAttribute="top" id="oXw-kM-Lsb"/>
+                                                <constraint firstAttribute="bottom" secondItem="GeY-yl-M61" secondAttribute="bottom" id="wCW-vb-Ty4"/>
+                                                <constraint firstItem="GeY-yl-M61" firstAttribute="leading" secondItem="0vW-nJ-9wK" secondAttribute="leading" id="weQ-nf-4WI"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="150"/>
+                                        <connections>
+                                            <outlet property="recipeImg" destination="GeY-yl-M61" id="2Yp-rA-6ML"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i0U-hc-e2o" firstAttribute="top" secondItem="aVP-LZ-Qac" secondAttribute="top" id="D8W-fk-25S"/>
+                            <constraint firstItem="aVP-LZ-Qac" firstAttribute="bottom" secondItem="i0U-hc-e2o" secondAttribute="bottom" id="dwC-w3-7M1"/>
+                            <constraint firstItem="i0U-hc-e2o" firstAttribute="leading" secondItem="aVP-LZ-Qac" secondAttribute="leading" id="mKx-ya-JO6"/>
+                            <constraint firstItem="aVP-LZ-Qac" firstAttribute="trailing" secondItem="i0U-hc-e2o" secondAttribute="trailing" id="vkz-Eb-7er"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aVP-LZ-Qac"/>
                     </view>
                     <navigationItem key="navigationItem" id="I6S-EY-oVT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="i0U-hc-e2o" id="OjL-BL-fD9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jA-FR-PB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="138"/>
+            <point key="canvasLocation" x="1776.8" y="137.18140929535232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0dr-JC-Aaf">
@@ -110,5 +157,6 @@
     </scenes>
     <resources>
         <image name="burger6" width="966" height="725"/>
+        <image name="salad6" width="1050" height="700"/>
     </resources>
 </document>
