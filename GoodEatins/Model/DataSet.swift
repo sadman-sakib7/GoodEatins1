@@ -103,7 +103,7 @@ class DataSet {
     
     var myRecipes = [
         
-        Recipe(title: "Salad Pizza", instructions: "1 1/2 cups (355 ml) warm water (105°F-115°F) \n1 package (2 1/4 teaspoons) of active ",  imageName: "")
+        Recipe(title: "Salad Pizza", instructions: "1 1/2 cups (355 ml) warm water (105°F-115°F) \n1 package (2 1/4 teaspoons) of active ",  imageName: "sandwich6")
     ]
     
     func getRecipes(forCategoryTitle title:String) -> [Recipe] {

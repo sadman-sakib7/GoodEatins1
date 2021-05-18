@@ -8,6 +8,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My RecipeVC-->
+        <scene sceneID="zCP-k9-wcr">
+            <objects>
+                <viewController id="gHy-ek-vmo" customClass="MyRecipeVC" customModule="GoodEatins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gfb-Xw-We3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSV-Ia-6CN">
+                                <rect key="frame" x="20" y="64" width="335" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcs-se-tFK">
+                                <rect key="frame" x="20" y="113" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-rC-tkO">
+                                <rect key="frame" x="20" y="167" width="335" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Detail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W12-2X-Nvy">
+                                <rect key="frame" x="20" y="216" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90k-Sa-bq0">
+                                <rect key="frame" x="163" y="318.5" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitbtn:" destination="gHy-ek-vmo" eventType="touchUpInside" id="enT-dU-5N4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W12-2X-Nvy" firstAttribute="top" secondItem="fJg-rC-tkO" secondAttribute="bottom" constant="20" id="30j-iz-2Lx"/>
+                            <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="gcs-se-tFK" secondAttribute="trailing" constant="20" id="6pr-eq-GQ3"/>
+                            <constraint firstItem="90k-Sa-bq0" firstAttribute="centerX" secondItem="gfb-Xw-We3" secondAttribute="centerX" id="HPa-bz-1cL"/>
+                            <constraint firstItem="W12-2X-Nvy" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="JrQ-bg-GQ2"/>
+                            <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="KSV-Ia-6CN" secondAttribute="trailing" constant="20" id="OAl-By-ZZI"/>
+                            <constraint firstItem="fJg-rC-tkO" firstAttribute="top" secondItem="gcs-se-tFK" secondAttribute="bottom" constant="20" id="Ro4-oH-p8U"/>
+                            <constraint firstItem="90k-Sa-bq0" firstAttribute="centerY" secondItem="gfb-Xw-We3" secondAttribute="centerY" id="afn-M1-UOh"/>
+                            <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="fJg-rC-tkO" secondAttribute="trailing" constant="20" id="aps-ld-A0c"/>
+                            <constraint firstItem="fJg-rC-tkO" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="bXk-zS-It3"/>
+                            <constraint firstItem="KSV-Ia-6CN" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="cvK-Nz-edH"/>
+                            <constraint firstItem="gcs-se-tFK" firstAttribute="top" secondItem="KSV-Ia-6CN" secondAttribute="bottom" constant="20" id="e9p-FW-GxP"/>
+                            <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="W12-2X-Nvy" secondAttribute="trailing" constant="20" id="qlI-eZ-Tvz"/>
+                            <constraint firstItem="KSV-Ia-6CN" firstAttribute="top" secondItem="Tvl-lo-GHs" secondAttribute="top" constant="20" id="tBa-wo-4iT"/>
+                            <constraint firstItem="gcs-se-tFK" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="zYP-CD-qf9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tvl-lo-GHs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Gl-v6-4d4"/>
+                    <connections>
+                        <outlet property="detailtxt" destination="W12-2X-Nvy" id="bYS-cG-8qt"/>
+                        <outlet property="titletxt" destination="gcs-se-tFK" id="xoA-qx-ieY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esl-NT-bhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="-564"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -64,7 +131,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="axP-wv-dZx"/>
+                    <navigationItem key="navigationItem" id="axP-wv-dZx">
+                        <barButtonItem key="rightBarButtonItem" title="Add Recipe" id="T3K-wh-CUl">
+                            <connections>
+                                <segue destination="gHy-ek-vmo" kind="show" id="vOz-Qo-nEg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="5D7-8C-HFG" id="36l-EK-iWe"/>
                         <segue destination="meK-Qb-YKp" kind="show" identifier="toRecipesSelection" id="f6a-Yx-TsT"/>
