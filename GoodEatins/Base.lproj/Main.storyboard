@@ -130,11 +130,63 @@
                     <navigationItem key="navigationItem" id="I6S-EY-oVT"/>
                     <connections>
                         <outlet property="collectionView" destination="i0U-hc-e2o" id="OjL-BL-fD9"/>
+                        <segue destination="GbN-38-TeP" kind="show" identifier="toRecipeSelection" id="51r-SC-CsU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jA-FR-PB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1776.8" y="137.18140929535232"/>
+        </scene>
+        <!--Recipe DetailVC-->
+        <scene sceneID="OCf-eZ-cXs">
+            <objects>
+                <viewController id="GbN-38-TeP" customClass="RecipeDetailVC" customModule="GoodEatins" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hZ3-HO-J8c" customClass="RecipeDe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad5" translatesAutoresizingMaskIntoConstraints="NO" id="ioj-WK-JwJ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="gYu-xN-wgP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salmon Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHb-rw-qZw">
+                                <rect key="frame" x="118" y="303" width="139" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-mD-gH2">
+                                <rect key="frame" x="20" y="350" width="335" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pHb-rw-qZw" firstAttribute="top" secondItem="ioj-WK-JwJ" secondAttribute="bottom" constant="34" id="2CZ-zZ-IdV"/>
+                            <constraint firstItem="dGN-St-XaQ" firstAttribute="trailing" secondItem="ioj-WK-JwJ" secondAttribute="trailing" id="4V5-6T-V5H"/>
+                            <constraint firstItem="dGN-St-XaQ" firstAttribute="trailing" secondItem="FdU-mD-gH2" secondAttribute="trailing" constant="20" id="Fno-di-kxd"/>
+                            <constraint firstItem="FdU-mD-gH2" firstAttribute="leading" secondItem="dGN-St-XaQ" secondAttribute="leading" constant="20" id="N5j-KG-ivu"/>
+                            <constraint firstItem="pHb-rw-qZw" firstAttribute="centerX" secondItem="hZ3-HO-J8c" secondAttribute="centerX" id="Xg0-ur-Qcm"/>
+                            <constraint firstItem="ioj-WK-JwJ" firstAttribute="leading" secondItem="dGN-St-XaQ" secondAttribute="leading" id="alh-rB-HeH"/>
+                            <constraint firstItem="ioj-WK-JwJ" firstAttribute="top" secondItem="dGN-St-XaQ" secondAttribute="top" id="qu0-i4-2zs"/>
+                            <constraint firstItem="FdU-mD-gH2" firstAttribute="top" secondItem="pHb-rw-qZw" secondAttribute="bottom" constant="18" id="uAZ-Xr-dur"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dGN-St-XaQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WLP-cE-otK"/>
+                    <connections>
+                        <outlet property="recipeImg" destination="ioj-WK-JwJ" id="hXc-pP-Rqa"/>
+                        <outlet property="recipeInstructions" destination="FdU-mD-gH2" id="gbZ-TL-rOp"/>
+                        <outlet property="recipeTitle" destination="pHb-rw-qZw" id="unD-BG-KxW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4M-Th-rAj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0dr-JC-Aaf">
@@ -157,6 +209,7 @@
     </scenes>
     <resources>
         <image name="burger6" width="966" height="725"/>
+        <image name="salad5" width="632" height="954"/>
         <image name="salad6" width="1050" height="700"/>
     </resources>
 </document>
