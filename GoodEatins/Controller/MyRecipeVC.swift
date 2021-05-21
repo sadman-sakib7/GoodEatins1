@@ -26,7 +26,7 @@ class MyRecipeVC: UIViewController {
     
 
     @IBAction func submitbtn(_ sender: Any) {
-        recipe = Recipe(title: titletxt.text!, instructions: detailtxt.text!, imageName: "sandwich0")
+        recipe = Recipe(title: titletxt.text!, instructions: detailtxt.text!, imageName: "")
         
         data.myRecipes.append(recipe)
         print(data.myRecipes)

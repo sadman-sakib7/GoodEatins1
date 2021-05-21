@@ -12,6 +12,9 @@ class RecipeCell: UICollectionViewCell {
     
     @IBOutlet weak var recipeImg: UIImageView!
     
+    
+    @IBOutlet weak var recipeTitle: UILabel!
+    
     // uicollection (the parent class) vuew has its own awake from nib. hence use super() so that initialization of parent class can happen
     
     override func awakeFromNib() {
@@ -21,5 +24,6 @@ class RecipeCell: UICollectionViewCell {
     
     func configureCell(recipe: Recipe) {
         recipeImg.image = UIImage(named: recipe.imageName)
+        recipeTitle.text = recipe.title
     }
 }

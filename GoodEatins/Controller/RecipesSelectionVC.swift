@@ -14,6 +14,7 @@ class RecipesSelectionVC: UIViewController,UICollectionViewDelegate, UICollectio
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
      var selectedCategory: String! // Recieves the category name selected from HomeVC
      var recipes: [Recipe]!
      //let data = DataSet()
