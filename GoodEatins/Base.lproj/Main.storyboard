@@ -39,7 +39,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90k-Sa-bq0">
-                                <rect key="frame" x="163" y="318.5" width="49" height="30"/>
+                                <rect key="frame" x="20" y="280" width="335" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitbtn:" destination="gHy-ek-vmo" eventType="touchUpInside" id="enT-dU-5N4"/>
@@ -50,16 +50,17 @@
                         <constraints>
                             <constraint firstItem="W12-2X-Nvy" firstAttribute="top" secondItem="fJg-rC-tkO" secondAttribute="bottom" constant="20" id="30j-iz-2Lx"/>
                             <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="gcs-se-tFK" secondAttribute="trailing" constant="20" id="6pr-eq-GQ3"/>
-                            <constraint firstItem="90k-Sa-bq0" firstAttribute="centerX" secondItem="gfb-Xw-We3" secondAttribute="centerX" id="HPa-bz-1cL"/>
+                            <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="90k-Sa-bq0" secondAttribute="trailing" constant="20" id="FWX-Ag-Ywa"/>
                             <constraint firstItem="W12-2X-Nvy" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="JrQ-bg-GQ2"/>
                             <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="KSV-Ia-6CN" secondAttribute="trailing" constant="20" id="OAl-By-ZZI"/>
+                            <constraint firstItem="90k-Sa-bq0" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="RSL-uB-KmA"/>
                             <constraint firstItem="fJg-rC-tkO" firstAttribute="top" secondItem="gcs-se-tFK" secondAttribute="bottom" constant="20" id="Ro4-oH-p8U"/>
-                            <constraint firstItem="90k-Sa-bq0" firstAttribute="centerY" secondItem="gfb-Xw-We3" secondAttribute="centerY" id="afn-M1-UOh"/>
                             <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="fJg-rC-tkO" secondAttribute="trailing" constant="20" id="aps-ld-A0c"/>
                             <constraint firstItem="fJg-rC-tkO" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="bXk-zS-It3"/>
                             <constraint firstItem="KSV-Ia-6CN" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="cvK-Nz-edH"/>
                             <constraint firstItem="gcs-se-tFK" firstAttribute="top" secondItem="KSV-Ia-6CN" secondAttribute="bottom" constant="20" id="e9p-FW-GxP"/>
                             <constraint firstItem="Tvl-lo-GHs" firstAttribute="trailing" secondItem="W12-2X-Nvy" secondAttribute="trailing" constant="20" id="qlI-eZ-Tvz"/>
+                            <constraint firstItem="90k-Sa-bq0" firstAttribute="top" secondItem="W12-2X-Nvy" secondAttribute="bottom" constant="30" id="rxg-KC-zzv"/>
                             <constraint firstItem="KSV-Ia-6CN" firstAttribute="top" secondItem="Tvl-lo-GHs" secondAttribute="top" constant="20" id="tBa-wo-4iT"/>
                             <constraint firstItem="gcs-se-tFK" firstAttribute="leading" secondItem="Tvl-lo-GHs" secondAttribute="leading" constant="20" id="zYP-CD-qf9"/>
                         </constraints>
@@ -95,7 +96,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger6" translatesAutoresizingMaskIntoConstraints="NO" id="5F0-6M-KM4">
-                                                    <rect key="frame" x="8" y="0.0" width="359" height="192.00000000000011"/>
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="192"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pgR-9k-as9">
                                                     <rect key="frame" x="20" y="61" width="335" height="78"/>

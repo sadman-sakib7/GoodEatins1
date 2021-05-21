@@ -14,16 +14,16 @@ class RecipesSelectionVC: UIViewController,UICollectionViewDelegate, UICollectio
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-     var selectedCategory: String!
+     var selectedCategory: String! // Recieves the category name selected from HomeVC
      var recipes: [Recipe]!
-     let data = DataSet()
+     //let data = DataSet()
      var recipeToPass: Recipe!
 
      override func viewDidLoad() {
          super.viewDidLoad()
          collectionView.delegate = self
          collectionView.dataSource = self
-         recipes = data.getRecipes(forCategoryTitle: selectedCategory)
+         recipes = data.getRecipes(forCategoryTitle: selectedCategory) // Retrievs the array of                                                                   Burgers/salad/Pizza ..
      }
      
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,26 +34,36 @@ class RecipesSelectionVC: UIViewController,UICollectionViewDelegate, UICollectio
          if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as? RecipeCell {
              let recipe = recipes[indexPath.item]
              cell.configureCell(recipe: recipe)
+            print("populating cell \(recipe)"  )
              return cell
          }
+        print("populating cell 22")
          return UICollectionViewCell()
+        
      }
      
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         let width = view.bounds.width
-         let cellDimension = (width / 2) - 15
-         return CGSize(width: cellDimension, height: cellDimension)
-     }
+    //gets called once a item in collection view gets selected
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         recipeToPass = recipes[indexPath.item]
         performSegue(withIdentifier: "toRecipeSelection", sender: self)
     }
     
+    // It is for the 3ed view : detail recepi
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailsVC = segue.destination as? RecipeDetailVC {
             detailsVC.selectedRecipe = recipeToPass
         }
     }
+    
+    // Grphics purposes
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = view.bounds.width
+        let cellDimension = (width / 2) - 15
+        return CGSize(width: cellDimension, height: cellDimension)
+    }
+    
+    
 
 }

@@ -8,20 +8,20 @@
 
 import UIKit
 
+var data = DataSet();
+
 class MyRecipeVC: UIViewController {
 
     @IBOutlet weak var titletxt: UITextField!
     
     @IBOutlet weak var detailtxt: UITextField!
-    let data = DataSet()
+    //let data = DataSet()
     var recipe = Recipe(title: "", instructions: "", imageName: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-         recipe = Recipe(title: titletxt.text!, instructions: detailtxt.text!, imageName: "sandwich0")
-        
-        data.myRecipes.append(recipe)
+         
     }
     
 
@@ -29,6 +29,8 @@ class MyRecipeVC: UIViewController {
         recipe = Recipe(title: titletxt.text!, instructions: detailtxt.text!, imageName: "sandwich0")
         
         data.myRecipes.append(recipe)
+        print(data.myRecipes)
+        
         
     }
     

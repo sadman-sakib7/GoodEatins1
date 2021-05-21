@@ -10,7 +10,7 @@ import UIKit
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    let data = DataSet()
+    //let data = DataSet()
     var categoryToPass: String! // holding the things we are going to pass to the next view-controller through segway
 
     @IBOutlet weak var tableView: UITableView!
@@ -37,13 +37,13 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        categoryToPass = data.categories[indexPath.row].title
+        categoryToPass = data.categories[indexPath.row].title  // getting the category title like burger,sandwitch ...
          performSegue(withIdentifier: "toRecipesSelection", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let recipesVC = segue.destination as? RecipesSelectionVC {
-            recipesVC.selectedCategory = categoryToPass
+            recipesVC.selectedCategory = categoryToPass   // passing the category title like burger,sandwitch ...
         }
     }
     

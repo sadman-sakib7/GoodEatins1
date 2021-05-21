@@ -13,6 +13,7 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryImg: UIImageView!
     
     @IBOutlet weak var categoryTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         categoryImg.layer.cornerRadius = 10
